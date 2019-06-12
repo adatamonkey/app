@@ -7,7 +7,7 @@ use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-    public function index($id='unknown')
+    public function index()
     {
         $data = [
             'msg'=>'名前を入力するんや！',
@@ -16,7 +16,7 @@ class HelloController extends Controller
     }
 
     public function post(Request $request){
-        $msg =$request->msg;
+        $msg = $request->msg;
         $data = [
             'msg'=>'こんにちは、'.$msg.'さん！',
         ];
