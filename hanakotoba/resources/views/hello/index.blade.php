@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello/Index</title>
-</head>
-<body>
-  <h1>Blade / Index</h1>
-  <p>これはBladeのサンプルページです。</p>
-  <p>{{$msg}}</p>
-  <form action="/hello" method="POST">
-    @csrf
-    <input type="text" name="msg">
-    <input type="submit">
-  </form>
-</body>
-</html>
+@extends('layouts.helloapp')
+
+@section('title', 'Index')
+
+@section('menubar')
+  @parent
+  インデックスページ
+@endsection
+@section('content')
+  <p>ここが本文のコンテンツです。</p>
+  @each('components.item', $data, 'item')
+
+  @include('components.message',['msg_title'=>'OK','msg_content'=>'サブビューです。'])
+
+@endsection
+@section('footer')
+copyright 2019 yamada.
+@endsection
