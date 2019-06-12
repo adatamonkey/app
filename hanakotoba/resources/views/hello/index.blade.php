@@ -11,7 +11,7 @@
   <p>これはBladeのサンプルページです。</p>
   <p>{{$msg}}</p>
   <form action="/hello" method="POST">
-    {{ csrf_field() }}
+    @csrf
     <input type="text" name="msg">
     <input type="submit">
   </form>
