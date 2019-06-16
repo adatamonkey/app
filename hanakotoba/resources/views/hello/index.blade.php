@@ -8,10 +8,8 @@
 @endsection
 @section('content')
   <p>ここが本文のコンテンツです。</p>
-  @each('components.item', $data, 'item')
-
-  @include('components.message',['msg_title'=>'OK','msg_content'=>'サブビューです。'])
-
+  <p>Controller value<br>'message' = {{$message}}</p>
+  <p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
 @endsection
 @section('footer')
 copyright 2019 yamada.
