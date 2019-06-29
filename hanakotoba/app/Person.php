@@ -8,6 +8,12 @@ use App\Scopes\ScopePerson;
 
 class Person extends Model
 {
+
+    public function boards()
+    {
+        return $this->hasMany('App\Board');
+    }
+
     public function getData()
     {
         return $this->id . ':' . $this->name . '(' . $this->age . ')';
