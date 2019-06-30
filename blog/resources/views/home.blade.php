@@ -12,7 +12,9 @@
     </head>
     <body>
         <div id="app">
-            <example-component></example-component>
+            <header-component></header-component>
+            <homeindex-component></homeindex-component>
+            <footer-component></footer-component>
         </div>
         <script src="{{ mix('js/app.js') }}"></script>
     </body>
